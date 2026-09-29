@@ -1,0 +1,3 @@
+generic deposits.csv
+binance trades.csv
+rates rates.csv

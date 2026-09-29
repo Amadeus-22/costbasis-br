@@ -1,0 +1,4 @@
+time,exchange,kind,asset,qty,quote_asset,quote_amount,fee,fee_asset,external_id
+2025-06-01T10:00:00-03:00,brx,buy,USDT,20000,BRL,110000,,,U-1
+2025-06-02T10:00:00-03:00,brx,transfer_out,USDT,20000,,,1,USDT,W-1
+2025-06-02T10:30:00-03:00,binance,transfer_in,USDT,19999,,,,,

@@ -1,0 +1,263 @@
+{
+  "disclaimer": "Estimate produced with the unverified example ruleset br-example. Confirm every figure against the Receita Federal rules in force, or with an accountant, before filing or paying anything.",
+  "year": 2026,
+  "ruleset": {
+    "id": "br-example",
+    "verified": false
+  },
+  "currency": "BRL",
+  "months": [
+    {
+      "month": "2026-01",
+      "sales": "29985.00",
+      "gain": "2471.25",
+      "exemption_limit": "35000.00",
+      "exempt": true,
+      "taxable_gain": "0.00",
+      "estimated_tax": "0.00",
+      "foreign_sales": "0.00",
+      "foreign_gain": "0.00",
+      "operations": "30000.00",
+      "foreign_operations": "0.00",
+      "assets": [
+        {
+          "asset": "BTC",
+          "regime": "domestic",
+          "disposals": 1,
+          "qty": "0.05",
+          "proceeds": "29985.00",
+          "cost": "27513.75",
+          "gain": "2471.25"
+        }
+      ],
+      "flags": []
+    },
+    {
+      "month": "2026-03",
+      "sales": "70964.50",
+      "gain": "5919.57",
+      "exemption_limit": "35000.00",
+      "exempt": false,
+      "taxable_gain": "6941.50",
+      "estimated_tax": "1041.23",
+      "foreign_sales": "0.00",
+      "foreign_gain": "0.00",
+      "operations": "71000.00",
+      "foreign_operations": "0.00",
+      "assets": [
+        {
+          "asset": "BTC",
+          "regime": "domestic",
+          "disposals": 1,
+          "qty": "0.1",
+          "proceeds": "61969.00",
+          "cost": "55027.50",
+          "gain": "6941.50"
+        },
+        {
+          "asset": "ETH",
+          "regime": "domestic",
+          "disposals": 1,
+          "qty": "0.5",
+          "proceeds": "8995.50",
+          "cost": "10017.43",
+          "gain": "-1021.93"
+        }
+      ],
+      "flags": [
+        {
+          "rule_id": "capital_gain_payment",
+          "title": "Capital-gains tax payment",
+          "detail": "estimated tax on domestic disposals; payment code 4600",
+          "due": "last business day of the month after the disposal",
+          "source": "Lei 8.981/1995 art. 21 as amended by Lei 13.259/2016 https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13259.htm ; DARF 4600 and deadline per https://www.mercadobitcoin.com.br/irpf",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "month": "2026-04",
+      "sales": "0.00",
+      "gain": "0.00",
+      "exemption_limit": "0.00",
+      "exempt": false,
+      "taxable_gain": "0.00",
+      "estimated_tax": "0.00",
+      "foreign_sales": "11550.00",
+      "foreign_gain": "1521.02",
+      "operations": "11550.00",
+      "foreign_operations": "11550.00",
+      "assets": [
+        {
+          "asset": "ETH",
+          "regime": "foreign",
+          "disposals": 1,
+          "qty": "0.5",
+          "proceeds": "11538.45",
+          "cost": "10017.43",
+          "gain": "1521.02"
+        },
+        {
+          "asset": "USDT",
+          "regime": "foreign",
+          "disposals": 1,
+          "qty": "2.1",
+          "proceeds": "11.55",
+          "cost": "11.55",
+          "gain": "0.00"
+        }
+      ],
+      "flags": []
+    },
+    {
+      "month": "2026-05",
+      "sales": "0.00",
+      "gain": "0.00",
+      "exemption_limit": "0.00",
+      "exempt": false,
+      "taxable_gain": "0.00",
+      "estimated_tax": "0.00",
+      "foreign_sales": "5455.45",
+      "foreign_gain": "-50.04",
+      "operations": "5450.00",
+      "foreign_operations": "5450.00",
+      "assets": [
+        {
+          "asset": "BTC",
+          "regime": "foreign",
+          "disposals": 1,
+          "qty": "0.00001",
+          "proceeds": "5.45",
+          "cost": "5.49",
+          "gain": "-0.04"
+        },
+        {
+          "asset": "USDT",
+          "regime": "foreign",
+          "disposals": 1,
+          "qty": "1000",
+          "proceeds": "5450.00",
+          "cost": "5500.00",
+          "gain": "-50.00"
+        }
+      ],
+      "flags": []
+    },
+    {
+      "month": "2026-07",
+      "sales": "0.00",
+      "gain": "0.00",
+      "exemption_limit": "0.00",
+      "exempt": false,
+      "taxable_gain": "0.00",
+      "estimated_tax": "0.00",
+      "foreign_sales": "9720.00",
+      "foreign_gain": "1696.27",
+      "operations": "9720.00",
+      "foreign_operations": "9720.00",
+      "assets": [
+        {
+          "asset": "ETH",
+          "regime": "foreign",
+          "disposals": 1,
+          "qty": "0.4",
+          "proceeds": "9710.28",
+          "cost": "8013.94",
+          "gain": "1696.34"
+        },
+        {
+          "asset": "USDT",
+          "regime": "foreign",
+          "disposals": 1,
+          "qty": "1.8",
+          "proceeds": "9.72",
+          "cost": "9.79",
+          "gain": "-0.07"
+        }
+      ],
+      "flags": []
+    },
+    {
+      "month": "2026-08",
+      "sales": "0.00",
+      "gain": "0.00",
+      "exemption_limit": "0.00",
+      "exempt": false,
+      "taxable_gain": "0.00",
+      "estimated_tax": "0.00",
+      "foreign_sales": "39.90",
+      "foreign_gain": "0.64",
+      "operations": "39900.00",
+      "foreign_operations": "39900.00",
+      "assets": [
+        {
+          "asset": "BTC",
+          "regime": "foreign",
+          "disposals": 1,
+          "qty": "0.00007",
+          "proceeds": "39.90",
+          "cost": "39.26",
+          "gain": "0.64"
+        }
+      ],
+      "flags": [
+        {
+          "rule_id": "decripto-monthly",
+          "title": "DeCripto monthly declaration (IN RFB 2.291/2025)",
+          "detail": "operations in scope \"foreign\" total 39900.00 BRL, above 35000.00 BRL",
+          "due": "last business day of the following month",
+          "source": "IN RFB 2.291/2025 arts. 5 §3, 12, 18, 19 https://www.normaslegais.com.br/legislacao/instrucao-normativa-rfb-2291-2025.htm ; https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/declaracoes-e-demonstrativos/criptoativos/decripto",
+          "verified": false
+        }
+      ]
+    }
+  ],
+  "foreign": {
+    "gain": "3167.88",
+    "taxable_gain": "3167.88",
+    "rate": "0.15",
+    "estimated_tax": "475.18",
+    "flag": {
+      "rule_id": "foreign_annual",
+      "title": "Annual tax on assets held abroad",
+      "detail": "disposals on foreign exchanges are taxed annually at 15%",
+      "due": "with the annual income tax return (DAA) for the year",
+      "source": "Lei 14.754/2023 https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14754.htm ; Receita reading per https://bitnoticias.com.br/noticias/receita-federal-imposto-criptoativos/ and https://cmtadv.com.br/pt/operacoes-com-criptoativos-no-exterior-e-as-novas-regras-da-lei-no-14-754-2023/",
+      "verified": false
+    }
+  },
+  "year_end": [
+    {
+      "asset": "BTC",
+      "qty": "0.12992",
+      "cost": "72864.35",
+      "average_cost": "560840.10",
+      "must_declare": true
+    },
+    {
+      "asset": "ETH",
+      "qty": "0.608",
+      "cost": "12181.20",
+      "average_cost": "20034.86",
+      "must_declare": true
+    },
+    {
+      "asset": "USDT",
+      "qty": "2896.1",
+      "cost": "15748.66",
+      "average_cost": "5.44",
+      "must_declare": true
+    }
+  ],
+  "year_flags": [
+    {
+      "rule_id": "dirpf-bens-direitos",
+      "title": "Declare holding in the annual return (DIRPF, Bens e Direitos group 08)",
+      "detail": "year-end cost at or above 5000.00 BRL: [BTC ETH USDT]",
+      "due": "annual return deadline of the following year",
+      "source": "Receita Federal news, 2023-03 https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2023/marco/receita-federal-esclarece-sobre-declaracao-de-operacoes-com-criptoativos",
+      "verified": false
+    }
+  ],
+  "estimated_tax": "1516.41"
+}

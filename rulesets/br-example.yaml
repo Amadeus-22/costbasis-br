@@ -1,0 +1,136 @@
+# Example ruleset: Brazilian individual (pessoa física) taxation of crypto gains.
+#
+# EVERY VALUE HERE IS UNVERIFIED (verified: false). They were compiled from
+# public sources in September 2026 for a software demonstration; several
+# primary texts could not be loaded and were confirmed only through secondary
+# sources. This file is not tax advice. Check each rule against the cited
+# legal text, or with an accountant, before relying on any number it produces.
+# Research notes and confidence levels: docs/adr/0002-rules-as-dated-data.md.
+#
+# planalto.gov.br links follow the site's standard URL pattern; the pages did
+# not load during research, so the legal texts were not re-read.
+#
+# Schema rules:
+#   - amounts and rates are written as quoted decimals and parsed exactly;
+#   - every rule has effective_from (and optionally effective_to), inclusive
+#     YYYY-MM-DD dates; ranges in one family must not overlap;
+#   - every rule has a source and a verified flag;
+#   - unknown keys are rejected by the loader.
+
+id: br-example
+name: Brazil, individual crypto capital gains (example, unverified)
+jurisdiction: BR
+currency: BRL
+verified: false
+disclaimer: >-
+  Estimate produced with the unverified example ruleset br-example. Confirm
+  every figure against the Receita Federal rules in force, or with an
+  accountant, before filing or paying anything.
+
+# Exchanges whose custody counts as "abroad". This is a fact about the
+# exchange, not the law, and it is contested for exchanges with a Brazilian
+# entity; edit the list to match where your account is actually held.
+foreign_exchanges:
+  - effective_from: 2019-08-01
+    names: [binance]
+    source: >-
+      Binance's own FAQ describes holdings on Binance as located abroad for
+      Lei 14.754/2023 purposes:
+      https://www.binance.com/pt-BR/support/faq/detail/9095ba97b526440bb0173776c26f73b1
+    verified: false
+
+# "Bens de pequeno valor": total monthly sales at or below the limit are
+# exempt. Receita applies it to the aggregate of all crypto sold in the month,
+# whatever the type. Effective date approximates Lei 11.196/2005 (published
+# 2005-11-22), which set the R$35,000 figure; not checked against the text.
+monthly_exemption:
+  - effective_from: 2005-11-22
+    sales_limit: "35000"
+    source: >-
+      Lei 9.250/1995 art. 22, II (wording from Lei 11.196/2005)
+      https://www.planalto.gov.br/ccivil_03/leis/l9250.htm ; aggregate scope per
+      Receita Federal news of 2023-03:
+      https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2023/marco/receita-federal-esclarece-sobre-declaracao-de-operacoes-com-criptoativos
+    verified: false
+
+# Progressive capital-gains rates, applied marginally ("sobre a parcela") to
+# the month's taxable gain. Paid monthly by DARF.
+capital_gain_rates:
+  - effective_from: 2017-01-01
+    brackets:
+      - { up_to: "5000000", rate: "0.15" }
+      - { up_to: "10000000", rate: "0.175" }
+      - { up_to: "30000000", rate: "0.20" }
+      - { rate: "0.225" }
+    # No explicit provision was found for offsetting a loss on one disposal
+    # against a gain on another; the conservative reading is no offset.
+    offset_losses_in_month: false
+    payment_code: "4600"
+    payment_due: last business day of the month after the disposal
+    source: >-
+      Lei 8.981/1995 art. 21 as amended by Lei 13.259/2016
+      https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13259.htm ;
+      DARF 4600 and deadline per https://www.mercadobitcoin.com.br/irpf
+    verified: false
+
+# Assets on exchanges located abroad: 15% on the year's net gain, computed in
+# the annual return, no monthly exemption. Receita's reading (Solução de
+# Consulta Cosit 130/2026, seen only in news coverage) is disputed by some
+# practitioners. Loss carry-forward between years is not modelled.
+foreign_regime:
+  - effective_from: 2024-01-01
+    rate: "0.15"
+    offset_losses_in_year: true
+    payment_due: with the annual income tax return (DAA) for the year
+    source: >-
+      Lei 14.754/2023 https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14754.htm ;
+      Receita reading per https://bitnoticias.com.br/noticias/receita-federal-imposto-criptoativos/
+      and https://cmtadv.com.br/pt/operacoes-com-criptoativos-no-exterior-e-as-novas-regras-da-lei-no-14-754-2023/
+    verified: false
+
+reporting:
+  # Monthly report of operations done abroad or without a Brazilian exchange.
+  # Replaced by DeCripto from July 2026 (IN RFB 2.291/2025 art. 18).
+  - id: in1888-monthly
+    title: Monthly crypto operations report (IN RFB 1.888/2019)
+    kind: monthly_operations
+    scope: foreign
+    threshold: "30000"
+    due: last business day of the following month
+    effective_from: 2019-08-01
+    effective_to: 2026-06-30
+    source: >-
+      IN RFB 1.888/2019 art. 6 (primary text on normas.receita.fazenda.gov.br
+      could not be loaded during research); revocation by IN RFB 2.291/2025 art. 18
+    verified: false
+
+  # DeCripto. Threshold per art. 5 §3 as reported; whether operations through
+  # Brazilian providers are excluded for individuals was not confirmed, and
+  # this ruleset assumes they are (scope: foreign).
+  - id: decripto-monthly
+    title: DeCripto monthly declaration (IN RFB 2.291/2025)
+    kind: monthly_operations
+    scope: foreign
+    threshold: "35000"
+    due: last business day of the following month
+    effective_from: 2026-07-01
+    source: >-
+      IN RFB 2.291/2025 arts. 5 §3, 12, 18, 19
+      https://www.normaslegais.com.br/legislacao/instrucao-normativa-rfb-2291-2025.htm ;
+      https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/declaracoes-e-demonstrativos/criptoativos/decripto
+    verified: false
+
+  # Annual return, Bens e Direitos group 08 (codes 01 Bitcoin, 02 altcoins,
+  # 03 stablecoins, 10 NFTs, 99 others): declare each crypto whose acquisition
+  # cost is at least R$5,000. Start date not verified.
+  - id: dirpf-bens-direitos
+    title: Declare holding in the annual return (DIRPF, Bens e Direitos group 08)
+    kind: year_end_position
+    scope: all
+    threshold: "5000"
+    due: annual return deadline of the following year
+    effective_from: 2019-01-01
+    source: >-
+      Receita Federal news, 2023-03
+      https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2023/marco/receita-federal-esclarece-sobre-declaracao-de-operacoes-com-criptoativos
+    verified: false

@@ -1,0 +1,4 @@
+month,sales_brl,gain_brl,exemption_limit_brl,exempt,taxable_gain_brl,estimated_tax_brl,foreign_sales_brl,foreign_gain_brl,flags
+2026-02,0.00,0.00,0.00,false,0.00,0.00,55055.00,-2.81,in1888-monthly
+2026-06,0.00,0.00,0.00,false,0.00,0.00,29700.00,2142.44,
+2026-09,0.00,0.00,0.00,false,0.00,0.00,23802.30,-3694.52,

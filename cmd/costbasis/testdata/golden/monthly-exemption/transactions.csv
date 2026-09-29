@@ -1,0 +1,11 @@
+# Exemption boundary: January sales are exactly 35000 (exempt), February's
+# are 35000.01 (taxed). March has a gain and a loss: the loss is not offset.
+time,exchange,kind,asset,qty,quote_asset,quote_amount,fee,fee_asset,external_id
+2025-12-01T10:00:00-03:00,brx,buy,BTC,1,BRL,300000,,,B-1
+2025-12-01T10:05:00-03:00,brx,buy,ETH,10,BRL,150000,,,B-2
+2026-01-10T10:00:00-03:00,brx,sell,BTC,0.1,BRL,35000,,,S-1
+2026-02-10T10:00:00-03:00,brx,sell,BTC,0.1,BRL,35000.01,,,S-2
+2026-03-10T10:00:00-03:00,brx,sell,BTC,0.2,BRL,80000,,,S-3
+2026-03-11T10:00:00-03:00,brx,sell,ETH,2,BRL,20000,,,S-4
+# 23:30 in Sao Paulo on 31 March is already April in UTC: still March here.
+2026-03-31T23:30:00-03:00,brx,sell,BTC,0.1,BRL,40000,,,S-5

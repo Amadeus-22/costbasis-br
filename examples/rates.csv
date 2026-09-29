@@ -1,0 +1,9 @@
+# Daily BRL prices used to value non-BRL legs (illustrative values).
+# One row per calendar date (taxpayer's time zone) and pair.
+date,pair,rate
+2026-02-01,ETH/BRL,21000
+2026-04-02,USDT/BRL,5.50
+2026-05-20,USDT/BRL,5.45
+2026-05-20,BTC/BRL,545000
+2026-07-08,USDT/BRL,5.40
+2026-08-05,BTC/BRL,570000

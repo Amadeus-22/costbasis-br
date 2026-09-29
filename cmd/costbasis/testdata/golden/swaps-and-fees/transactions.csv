@@ -1,0 +1,10 @@
+# Crypto-to-crypto trades are disposals; fees paid in BNB are disposals of BNB;
+# staking income is acquired at market value; a stand-alone fee is a disposal.
+time,exchange,kind,asset,qty,quote_asset,quote_amount,fee,fee_asset,external_id
+2026-01-05T10:00:00-03:00,brx,buy,USDT,10000,BRL,55000,,,1
+2026-01-05T10:01:00-03:00,brx,buy,BNB,10,BRL,20000,,,2
+2026-02-02T12:00:00-03:00,brx,buy,ETH,3,USDT,9000,0.02,BNB,3
+2026-02-20T12:00:00-03:00,brx,sell,ETH,1,USDT,3500,1.5,USDT,4
+2026-03-01T09:00:00-03:00,brx,income,ETH,0.1,,,,,5
+2026-03-15T09:00:00-03:00,brx,fee,BNB,0.5,,,,,6
+2026-04-10T16:00:00-03:00,brx,sell,ETH,2.1,BRL,44100,10,BRL,7

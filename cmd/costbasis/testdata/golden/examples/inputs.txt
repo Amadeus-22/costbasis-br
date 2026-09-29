@@ -1,0 +1,4 @@
+# The README's quick start: these must stay in sync with the README output.
+generic ../../../../../examples/transactions.csv
+binance ../../../../../examples/binance-trade-history.csv
+rates ../../../../../examples/rates.csv

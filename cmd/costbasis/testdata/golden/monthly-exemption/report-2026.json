@@ -1,0 +1,141 @@
+{
+  "disclaimer": "Estimate produced with the unverified example ruleset br-example. Confirm every figure against the Receita Federal rules in force, or with an accountant, before filing or paying anything.",
+  "year": 2026,
+  "ruleset": {
+    "id": "br-example",
+    "verified": false
+  },
+  "currency": "BRL",
+  "months": [
+    {
+      "month": "2026-01",
+      "sales": "35000.00",
+      "gain": "5000.00",
+      "exemption_limit": "35000.00",
+      "exempt": true,
+      "taxable_gain": "0.00",
+      "estimated_tax": "0.00",
+      "foreign_sales": "0.00",
+      "foreign_gain": "0.00",
+      "operations": "35000.00",
+      "foreign_operations": "0.00",
+      "assets": [
+        {
+          "asset": "BTC",
+          "regime": "domestic",
+          "disposals": 1,
+          "qty": "0.1",
+          "proceeds": "35000.00",
+          "cost": "30000.00",
+          "gain": "5000.00"
+        }
+      ],
+      "flags": []
+    },
+    {
+      "month": "2026-02",
+      "sales": "35000.01",
+      "gain": "5000.01",
+      "exemption_limit": "35000.00",
+      "exempt": false,
+      "taxable_gain": "5000.01",
+      "estimated_tax": "750.00",
+      "foreign_sales": "0.00",
+      "foreign_gain": "0.00",
+      "operations": "35000.01",
+      "foreign_operations": "0.00",
+      "assets": [
+        {
+          "asset": "BTC",
+          "regime": "domestic",
+          "disposals": 1,
+          "qty": "0.1",
+          "proceeds": "35000.01",
+          "cost": "30000.00",
+          "gain": "5000.01"
+        }
+      ],
+      "flags": [
+        {
+          "rule_id": "capital_gain_payment",
+          "title": "Capital-gains tax payment",
+          "detail": "estimated tax on domestic disposals; payment code 4600",
+          "due": "last business day of the month after the disposal",
+          "source": "Lei 8.981/1995 art. 21 as amended by Lei 13.259/2016 https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13259.htm ; DARF 4600 and deadline per https://www.mercadobitcoin.com.br/irpf",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "month": "2026-03",
+      "sales": "140000.00",
+      "gain": "20000.00",
+      "exemption_limit": "35000.00",
+      "exempt": false,
+      "taxable_gain": "30000.00",
+      "estimated_tax": "4500.00",
+      "foreign_sales": "0.00",
+      "foreign_gain": "0.00",
+      "operations": "140000.00",
+      "foreign_operations": "0.00",
+      "assets": [
+        {
+          "asset": "BTC",
+          "regime": "domestic",
+          "disposals": 2,
+          "qty": "0.3",
+          "proceeds": "120000.00",
+          "cost": "90000.00",
+          "gain": "30000.00"
+        },
+        {
+          "asset": "ETH",
+          "regime": "domestic",
+          "disposals": 1,
+          "qty": "2",
+          "proceeds": "20000.00",
+          "cost": "30000.00",
+          "gain": "-10000.00"
+        }
+      ],
+      "flags": [
+        {
+          "rule_id": "capital_gain_payment",
+          "title": "Capital-gains tax payment",
+          "detail": "estimated tax on domestic disposals; payment code 4600",
+          "due": "last business day of the month after the disposal",
+          "source": "Lei 8.981/1995 art. 21 as amended by Lei 13.259/2016 https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/lei/l13259.htm ; DARF 4600 and deadline per https://www.mercadobitcoin.com.br/irpf",
+          "verified": false
+        }
+      ]
+    }
+  ],
+  "foreign": null,
+  "year_end": [
+    {
+      "asset": "BTC",
+      "qty": "0.5",
+      "cost": "150000.00",
+      "average_cost": "300000.00",
+      "must_declare": true
+    },
+    {
+      "asset": "ETH",
+      "qty": "8",
+      "cost": "120000.00",
+      "average_cost": "15000.00",
+      "must_declare": true
+    }
+  ],
+  "year_flags": [
+    {
+      "rule_id": "dirpf-bens-direitos",
+      "title": "Declare holding in the annual return (DIRPF, Bens e Direitos group 08)",
+      "detail": "year-end cost at or above 5000.00 BRL: [BTC ETH]",
+      "due": "annual return deadline of the following year",
+      "source": "Receita Federal news, 2023-03 https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2023/marco/receita-federal-esclarece-sobre-declaracao-de-operacoes-com-criptoativos",
+      "verified": false
+    }
+  ],
+  "estimated_tax": "5250.00"
+}

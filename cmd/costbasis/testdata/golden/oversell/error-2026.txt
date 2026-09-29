@@ -1,0 +1,1 @@
+costbasis: compute cost basis: transaction f63c46cd5ee5 (binance sell BTC at 2026-03-03T15:00:00Z): disposes of 0.2 BTC but only 0.1 BTC is held; the history is incomplete (import the missing acquisitions or earlier exports)

@@ -1,0 +1,13 @@
+# Example history in the generic format (see internal/adapter/importer/generic).
+# "brx" is a fictional Brazilian exchange; "binance" is treated as foreign by
+# the br-example ruleset. Amounts are illustrative, not market data.
+time,exchange,kind,asset,qty,quote_asset,quote_amount,fee,fee_asset,external_id
+2025-11-03T10:15:00-03:00,brx,deposit,BRL,200000,,,,,D-1
+2025-11-03T10:20:00-03:00,brx,buy,BTC,0.2,BRL,110000,55,BRL,T-100
+2025-11-20T16:00:00-03:00,brx,buy,ETH,2,BRL,40000,20,BRL,T-101
+2025-12-15T09:00:00-03:00,brx,transfer_out,ETH,1,,,0.002,ETH,W-7
+2025-12-15T09:40:00-03:00,binance,transfer_in,ETH,0.998,,,,,
+2026-01-15T11:00:00-03:00,brx,sell,BTC,0.05,BRL,30000,15,BRL,T-102
+2026-02-01T08:00:00-03:00,brx,income,ETH,0.01,,,,,S-1
+2026-03-10T14:30:00-03:00,brx,sell,BTC,0.1,BRL,62000,31,BRL,T-103
+2026-03-12T15:00:00-03:00,brx,sell,ETH,0.5,BRL,9000,4.5,BRL,T-104

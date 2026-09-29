@@ -1,0 +1,156 @@
+{
+  "disclaimer": "Estimate produced with the unverified example ruleset br-example. Confirm every figure against the Receita Federal rules in force, or with an accountant, before filing or paying anything.",
+  "year": 2026,
+  "ruleset": {
+    "id": "br-example",
+    "verified": false
+  },
+  "currency": "BRL",
+  "months": [
+    {
+      "month": "2026-02",
+      "sales": "0.00",
+      "gain": "0.00",
+      "exemption_limit": "0.00",
+      "exempt": false,
+      "taxable_gain": "0.00",
+      "estimated_tax": "0.00",
+      "foreign_sales": "55055.00",
+      "foreign_gain": "-2.81",
+      "operations": "55000.00",
+      "foreign_operations": "55000.00",
+      "assets": [
+        {
+          "asset": "BTC",
+          "regime": "foreign",
+          "disposals": 1,
+          "qty": "0.0001",
+          "proceeds": "55.00",
+          "cost": "55.06",
+          "gain": "-0.06"
+        },
+        {
+          "asset": "USDT",
+          "regime": "foreign",
+          "disposals": 1,
+          "qty": "10000",
+          "proceeds": "55000.00",
+          "cost": "55002.75",
+          "gain": "-2.75"
+        }
+      ],
+      "flags": [
+        {
+          "rule_id": "in1888-monthly",
+          "title": "Monthly crypto operations report (IN RFB 1.888/2019)",
+          "detail": "operations in scope \"foreign\" total 55000.00 BRL, above 30000.00 BRL",
+          "due": "last business day of the following month",
+          "source": "IN RFB 1.888/2019 art. 6 (primary text on normas.receita.fazenda.gov.br could not be loaded during research); revocation by IN RFB 2.291/2025 art. 18",
+          "verified": false
+        }
+      ]
+    },
+    {
+      "month": "2026-06",
+      "sales": "0.00",
+      "gain": "0.00",
+      "exemption_limit": "0.00",
+      "exempt": false,
+      "taxable_gain": "0.00",
+      "estimated_tax": "0.00",
+      "foreign_sales": "29700.00",
+      "foreign_gain": "2142.44",
+      "operations": "29700.00",
+      "foreign_operations": "29700.00",
+      "assets": [
+        {
+          "asset": "BTC",
+          "regime": "foreign",
+          "disposals": 1,
+          "qty": "0.05",
+          "proceeds": "29670.30",
+          "cost": "27527.50",
+          "gain": "2142.80"
+        },
+        {
+          "asset": "USDT",
+          "regime": "foreign",
+          "disposals": 1,
+          "qty": "5.5",
+          "proceeds": "29.70",
+          "cost": "30.06",
+          "gain": "-0.36"
+        }
+      ],
+      "flags": []
+    },
+    {
+      "month": "2026-09",
+      "sales": "0.00",
+      "gain": "0.00",
+      "exemption_limit": "0.00",
+      "exempt": false,
+      "taxable_gain": "0.00",
+      "estimated_tax": "0.00",
+      "foreign_sales": "23802.30",
+      "foreign_gain": "-3694.52",
+      "operations": "23802.30",
+      "foreign_operations": "23802.30",
+      "assets": [
+        {
+          "asset": "BTC",
+          "regime": "foreign",
+          "disposals": 1,
+          "qty": "0.0499",
+          "proceeds": "23778.50",
+          "cost": "27472.45",
+          "gain": "-3693.95"
+        },
+        {
+          "asset": "USDT",
+          "regime": "foreign",
+          "disposals": 1,
+          "qty": "4.491",
+          "proceeds": "23.80",
+          "cost": "24.38",
+          "gain": "-0.57"
+        }
+      ],
+      "flags": []
+    }
+  ],
+  "foreign": {
+    "gain": "-1554.88",
+    "taxable_gain": "0.00",
+    "rate": "0.15",
+    "estimated_tax": "0.00",
+    "flag": {
+      "rule_id": "foreign_annual",
+      "title": "Annual tax on assets held abroad",
+      "detail": "disposals on foreign exchanges are taxed annually at 15%",
+      "due": "with the annual income tax return (DAA) for the year",
+      "source": "Lei 14.754/2023 https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14754.htm ; Receita reading per https://bitnoticias.com.br/noticias/receita-federal-imposto-criptoativos/ and https://cmtadv.com.br/pt/operacoes-com-criptoativos-no-exterior-e-as-novas-regras-da-lei-no-14-754-2023/",
+      "verified": false
+    }
+  },
+  "year_end": [
+    {
+      "asset": "USDT",
+      "qty": "19980.009",
+      "cost": "108445.12",
+      "average_cost": "5.43",
+      "must_declare": true
+    }
+  ],
+  "year_flags": [
+    {
+      "rule_id": "dirpf-bens-direitos",
+      "title": "Declare holding in the annual return (DIRPF, Bens e Direitos group 08)",
+      "detail": "year-end cost at or above 5000.00 BRL: [USDT]",
+      "due": "annual return deadline of the following year",
+      "source": "Receita Federal news, 2023-03 https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2023/marco/receita-federal-esclarece-sobre-declaracao-de-operacoes-com-criptoativos",
+      "verified": false
+    }
+  ],
+  "estimated_tax": "0.00"
+}
